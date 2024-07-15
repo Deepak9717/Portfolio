@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color: royalblue;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  padding: 1rem 3rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  font-variant: small-caps;
+  color: var(--color);
+}
+
+header ul {
+  width: 90%;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+header ul li a {
+  padding: 0.45rem 0.6rem;
+}
+
+header ul li a:hover {
+  border-radius: 0.3rem;
+  background-color: rgba(170, 197, 250, 0.575);
+}
+
+button#toogle-btn img {
+  animation: rotate-center .7s ease-in-out both;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background: aqua;
+}
+
+footer>div {
+  width: 90%;
+  height: inherit;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: var(--color);
+}
+
+main {
+  width: 100%;
+  padding: 0 3rem;
+  background-image: url('./img/Shiny\ Overlay.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+section {
+  width: 100%;
+  padding: 0 0 3rem 0;
+}
+
+section p {
+  margin-bottom: 0;
+}
+
+.intro-section {
+  padding-top: 2.5rem;
+  padding-bottom: 3.75rem;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.myphoto {
+  width: 24rem;
+  height: 24rem;
+  background: url("./img/programmer.svg") no-repeat;
+}
+.dark .myphoto{
+  background: url("./img/programmer-dark.svg") no-repeat;
+}
+
+.intro-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-left div {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  row-gap: 0.5rem;
+}
+
+.links i {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  color: royalblue;
+}
+
+.links i:hover {
+  background: rgba(170, 197, 250, 0.575);
+  border-radius: 50%;
+}
+
+.intro {
+  gap: 2.5rem;
+}
+
+.intro div h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-variant: small-caps;
+}
+
+.intro a {
+  width: max-content;
+}
+
+.intro button {
+  width: 9rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  background-color: var(--color);
+  box-shadow: 2px 3px 5px black;
+}
+
+.intro button:hover {
+  background: #1c4bd8;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  font-variant: small-caps;
+  color: var(--color);
+}
+
+.about button {
+  width: auto;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  background-color: royalblue;
+}
+
+.about button:hover {
+  background-color: #1c4bd8;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-list>div {
+  max-width: calc(100%/5 - 13px);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.project-list img {
+  width: 100%;
+  padding: 0.7rem 0.7rem 0 0.7rem;
+  aspect-ratio: 1.3;
+}
+
+.skill-list div {
+  width: calc(100%/5 - 13px);
+  height: 10rem;
+  padding: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+.skill-list div:hover {
+  background-color: rgb(226, 225, 225);
+}
+
+.skill-list img {
+  width: 5.5rem;
+  height: 4.5rem;
+}
+
+.skill-list span {
+  font-size: 1.2rem;
+}
+
+section form {
+  padding-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form div {
+  width: 80%;
+  display: flex;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  width: 80%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
+form input:hover,
+form textarea:hover {
+  background: rgb(236, 236, 236);
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid royalblue;
+  outline: none;
+}
+
+form button {
+  width: 8.5rem;
+  padding: 0.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  background: royalblue;
+}
+
+form button:hover {
+  background: #1c4bd8;
+}
+
+
+
+
+
+
+
+
+
+
+/*Media queries*/
+@media (min-width: 1024px) and (max-width:1440px) {
+  .project-list>div {
+    min-width: 17rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-list>div {
+    max-width: none;
+    width: calc(100%/3 - 11px);
+  }
+}
+
+@media (max-width: 768px) {
+  header div {
+    width: 70% !important;
+  }
+
+  header ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-list>div {
+    width: calc(100%/2 - 9px);
+  }
+
+  .skill-list div {
+    width: calc(100%/3 - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0.7rem 1rem;
+  }
+
+  header ul li a {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .intro-section {
+    flex-direction: column-reverse;
+    position: relative;
+    gap: 0;
+  }
+
+  .intro-left {
+    width: auto;
+    flex-direction: column-reverse;
+
+  }
+
+  .intro {
+    text-align: center;
+    align-items: center;
+  }
+
+  .links {
+    position: absolute;
+    top: 110px;
+    left: 30px;
+  }
+
+  .project-list {
+    flex-direction: column;
+  }
+
+  .project-list>div {
+    width: 100%;
+  }
+
+  form div {
+    width: 100%;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  header ul li a {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .links {
+    left: 0px;
+    top: 90px;
+  }
+  .myphoto{
+    width: 20rem;
+    height: 20rem;
+  }
+  .skill-list div {
+    width: calc(100%/2 - 8px);
+  }
+  footer>div{
+    padding: 0.75rem;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .dark main {
+    background-size: 100% 30%;
+  }
+
+  header {
+    padding: 0.7rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  header h2 {
+    width: 30%;
+  }
+
+  header div {
+    width: 20% !important;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  footer div h4 {
+    font-size: 1rem !important;
+  }
+
+  main {
+    padding: 0 1.25rem;
+  }
+
+  .intro div h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .myphoto{
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width:320px) {
+  .links {
+    top: 55px;
+  }
+  .myphoto{
+    width: 16rem;
+    height: 16rem;
+  }
+}
